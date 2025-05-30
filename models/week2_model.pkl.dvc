@@ -1,5 +1,5 @@
 outs:
-- md5: ad33719d5e351e7065ca3a966d15d255
+- md5: 2d49e34ecb776a847293ec079caa6176
   size: 2096
   hash: md5
   path: week2_model.pkl
