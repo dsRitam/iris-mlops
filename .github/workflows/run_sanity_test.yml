@@ -1,5 +1,5 @@
 name: Sanity Test for IRIS Pipeline
-
+# version 2
 on:
   push:
     branches:
