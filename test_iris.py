@@ -5,13 +5,13 @@ import pandas as pd
 
 class TestIrisModel(unittest.TestCase):
     def setUp(self):
-        
-        with open('models/week2_model.pkl', 'rb') as f:
+        # Load trained model with absolute path for workflow compatibility
+        with open('/home/g21f2001145gcp/week2_ga/mlops_week2_repo/models/week2_model.pkl', 'rb') as f:
             self.model = pickle.load(f)
-        
+        # Use DataFrame with feature names to match training data
         self.sample_data = pd.DataFrame([[5.1, 3.5, 1.4, 0.2]], 
                                        columns=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'])
-        self.expected_class = 'setosa'  
+        self.expected_class = 'setosa'  # Matches IRIS dataset labeling
 
     def test_prediction_accuracy(self):
         prediction = self.model.predict(self.sample_data)[0]
